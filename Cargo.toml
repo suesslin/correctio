@@ -1,0 +1,7 @@
+[package]
+name = "correctio"
+version = "0.1.0"
+authors = ["Luke Morgenstern <lukemueller@protonmail.com>"]
+
+[dependencies]
+regex = "0.2"
