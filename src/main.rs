@@ -1,17 +1,11 @@
+mod models { pub mod grammatical_error; }
+
 extern crate regex;
 
 use std::fs::File;
 use std::io::prelude::*;
 use regex::*;
-
-struct GrammaticalError {
-    regexRules: Vec<String>,
-    desc: String
-} impl GrammaticalError {
-    fn new(r: Vec<String>, d: String) -> GrammaticalError {
-        GrammaticalError{regexRules: r, desc: d}
-    }
-}
+use models::grammatical_error::{GrammaticalError};
 
 fn main() {
     let mut contents = String::new();
