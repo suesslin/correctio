@@ -1,8 +1,8 @@
 pub struct GrammaticalError {
-    regexRules: Vec<String>,
+    pub regex_rules: Vec<String>,
     desc: String
 } impl GrammaticalError {
     pub fn new(r: Vec<String>, d: String) -> GrammaticalError {
-        GrammaticalError{regexRules: r, desc: d}
+        GrammaticalError{regex_rules: r, desc: d}
     }
 }
