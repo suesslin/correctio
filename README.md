@@ -3,7 +3,7 @@ An extendable recognition tool for grammatical errors in text.
 Still work in progress.
 
 ## Information
-### Regex
+### Regex Syntax
 correctio follows the syntax of [re2](https://github.com/google/re2) by Google, as the regex crate for Rust is based on
 the engine of the latter.
 ### Grammatical Error Rule
