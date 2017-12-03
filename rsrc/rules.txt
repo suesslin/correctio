@@ -1,9 +1,12 @@
 Spacing always follows punctuation mark (if letters follow it).
-(\.|\!|\?|\,)\w
+((?:\.|\?|!|,)\w)
 
 Beginning of a sentence needs to be capitalised.
-^[a-z]
-(\.|\!|\?)\s+[a-z]
+(^[a-z])
+(\w(?:\?|!|,|\.)?\s{2,})
 
 One space, not two or more.
-(\.|\,|\!|\?)\s{2,}
+(\.|,|!|\?)\s{2,}
+
+No space before a punctuation mark
+(\s(?:\.|\!|\,|\?))

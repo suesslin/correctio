@@ -9,14 +9,22 @@ use regex::*;
 use models::grammatical_error_rule::{GrammaticalErrorRule};
 
 fn main() {
-    let grammatical_errors = GrammaticalErrorRule::read_rgx_file("rsrc/rules.txt");
 
-    for error in grammatical_errors.unwrap() {
-        println!("New block");
-        for rule in error.regex_rules {
-            println!("{}", rule);
-        }
-    }
+    // let txt = contents_of_file("rsrc/mistakes-1.txt").unwrap();
+    // println!("{}", txt);
+    let rgx = Regex::new(r"(\.|,|!|\?)\s{2,}").unwrap();
+
+    // match contents_of_file("rsrc/mistakes-1.txt") {
+    //     Err(_) => println!("Couldn't use the file {}", "File name"),
+    //     Ok(f) => {
+    //         let grammatical_error_rules = GrammaticalErrorRule::read_rgx_file("rsrc/rules.txt");
+    //         let errors = grammatical_error_rules.map(|error_rule|{
+    //             error_rule.regex_rules(|{rgx_rule}|{
+    //
+    //             });
+    //         });
+    //     }
+    // };
 }
 
 trait RgxRuleFileReader {
